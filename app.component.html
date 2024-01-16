@@ -1,0 +1,67 @@
+<div class="container">
+  <h1 style="text-align: center;">Student form</h1>
+  
+  <form [formGroup]="studentForm" class="form-container">
+    <div class="center-form">
+    <div class="row">
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+          <mat-label>Age</mat-label>
+          <input matInput formControlName="age" required>
+        </mat-form-field>
+      </div>
+
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+          <mat-label>Select Dob</mat-label>
+          <input formControlName="dob" matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" required>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+        <input formControlName="email" matInput type="email" placeholder="Email" name="email"  required >
+      </mat-form-field>
+      </div>
+
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+        <input formControlName="phoneNumber" matInput type="tel" placeholder="Phone Number" name="phoneNumber" required>
+      </mat-form-field>
+      </div>
+
+      <div class="col-sm-6">
+        <mat-form-field class="larger-field">
+          <mat-label>Address</mat-label>
+          <textarea matInput formControlName="address" rows="4" required></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="col-sm-6" style="display: flex; justify-content: center; align-items: center;">
+        <button mat-button class="custom-large-button" type="submit" (click)="onSubmit()">Submit</button>
+      </div>
+    </div>
+    </div>
+  </form>
+</div>

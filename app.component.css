@@ -1,0 +1,35 @@
+h1 {
+  font-weight: bold;
+}
+
+.container {
+  padding: 20px;
+  max-width: 400px;
+  border: 2px solid;
+  background-color: gray;
+  color: aqua;
+  content: center;
+  margin: auto;
+}
+
+/* Add this CSS to center the form components */
+.center-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Add this CSS to increase the size of form fields */
+.larger-field {
+  width: 100%;
+  /* Adjust the width as needed */
+  /* font-size: 1rem; Increase the font size as needed */
+}
+
+.custom-large-button {
+  color: aqua;
+  background-color: aqua;
+  font-size: 15px;
+}
